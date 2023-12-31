@@ -47,6 +47,12 @@ function startGame() {
 
     console.log(firstCard, secondCard);
 
+    cardsPara.textContent = "Card: "
+    
+    for (let i=0; i < cards.length; i++) {
+        cardsPara.textContent += cards[i] + " ";
+    }
+
 }
 
 // If the sum of those 2 cards are less than 21, then the player will be able to request another card.
