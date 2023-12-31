@@ -3,6 +3,7 @@
 let firstCard = 10;
 let secondCard = 10;
 
+let cardsSum = firstCard + secondCard;
 
 let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
@@ -14,7 +15,15 @@ let newCardButton = document.getElementById("newcard-btn");
 startButton.addEventListener("click", startGame);
 
 function startGame() {
-    console.log("Start Game Button Clicked!");
+    
+    if (cardsSum === 21){
+        statusPara.textContent = "You've got blackjack!";
+    } else if (cardsSum < 21) {
+        statusPara.textContent = "Do you want a new card?";
+    } else {
+        statusPara.textContent = "You're out of the game!";
+    }
+
 }
 
 // If the sum of those 2 cards are less than 21, then the player will be able to request another card.
