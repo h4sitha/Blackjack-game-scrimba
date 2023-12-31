@@ -49,8 +49,6 @@ function gameProcess() {
         isAlive = false;
     }
 
-    console.log(firstCard, secondCard);
-
     cardsPara.textContent = "Card: "
 
     for (let i=0; i < cards.length; i++) {
@@ -75,7 +73,6 @@ function randomCard() {
 function getNewCard() {
     if (isAlive === true && isBlackjack === false) {
         let additionalCard = randomCard();
-        console.log(additionalCard);
         cards.push(additionalCard);
         cardsSum += additionalCard;
         gameProcess();
