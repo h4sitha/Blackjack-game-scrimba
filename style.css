@@ -17,3 +17,16 @@ p {
     margin: 0 0 20px 0;
     color: whitesmoke;
 }
+
+
+button {
+    width: 150px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(14, 107, 14);
+    background-color: goldenrod;
+    border: 0;
+    border-radius: 2px;
+}
