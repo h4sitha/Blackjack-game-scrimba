@@ -1,5 +1,9 @@
 // When the start game button pressed 2 random cards will be generated.
 
+let firstCard = 10;
+let secondCard = 10;
+
+
 let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
 let sumPara = document.getElementById("cards-sum");
