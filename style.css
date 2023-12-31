@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: rgb(14, 107, 14);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 p, h1 {
