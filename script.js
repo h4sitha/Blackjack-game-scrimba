@@ -23,6 +23,12 @@ function startGame() {
     cards = [firstCard, secondCard];
 
     cardsSum = firstCard + secondCard;
+
+    gameProcess();
+    
+}
+
+function gameProcess() {
     
     if (cardsSum === 21){
         statusPara.textContent = "You've got blackjack!";
@@ -54,4 +60,5 @@ function getNewCard() {
     console.log(additionalCard);
     cards.push(additionalCard);
     cardsSum += additionalCard;
+    gameProcess();
 }
