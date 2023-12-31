@@ -1,17 +1,13 @@
 // When the start game button pressed 2 random cards will be generated.
 
-let firstCard = randomCard();
-let secondCard = randomCard();
+let firstCard
+let secondCard
 
 let cardsSum = firstCard + secondCard;
 
 let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
 let sumPara = document.getElementById("cards-sum");
-
-function randomCard() {
-    return (Math.floor(Math.random() * 13) + 1);
-}
 
 
 let startButton = document.getElementById("start-btn");
@@ -20,6 +16,13 @@ let newCardButton = document.getElementById("newcard-btn");
 startButton.addEventListener("click", startGame);
 
 function startGame() {
+
+    firstCard = randomCard();
+    secondCard = randomCard();
+
+    function randomCard() {
+        return (Math.floor(Math.random() * 13) + 1);
+    }
     
     if (cardsSum === 21){
         statusPara.textContent = "You've got blackjack!";
