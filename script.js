@@ -4,6 +4,9 @@ let secondCard;
 let cards;
 let cardsSum;
 
+let isAlive = false;
+let isBlackjack = false;
+
 
 let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
@@ -16,6 +19,8 @@ startButton.addEventListener("click", startGame);
 newCardButton.addEventListener("click", getNewCard);
 
 function startGame() {
+
+    isAlive = true;
 
     firstCard = randomCard();
     secondCard = randomCard();
@@ -33,12 +38,14 @@ function gameProcess() {
     if (cardsSum === 21){
         statusPara.textContent = "You've got blackjack!";
         sumPara.textContent = "Sum: " + cardsSum;
+        isBlackjack = true;
     } else if (cardsSum < 21) {
         statusPara.textContent = "Do you want a new card?";
         sumPara.textContent = "Sum: " + cardsSum;
     } else {
         statusPara.textContent = "You're out of the game!";
         sumPara.textContent = "Sum: " + cardsSum;
+        isAlive = false;
     }
 
     console.log(firstCard, secondCard);
