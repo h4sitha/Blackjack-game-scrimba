@@ -21,6 +21,7 @@ newCardButton.addEventListener("click", getNewCard);
 function startGame() {
 
     isAlive = true;
+    isBlackjack = false;
 
     firstCard = randomCard();
     secondCard = randomCard();
@@ -63,9 +64,11 @@ function randomCard() {
 }
 
 function getNewCard() {
-    let additionalCard = randomCard();
-    console.log(additionalCard);
-    cards.push(additionalCard);
-    cardsSum += additionalCard;
-    gameProcess();
+    if (isAlive === true && isBlackjack === false) {
+        let additionalCard = randomCard();
+        console.log(additionalCard);
+        cards.push(additionalCard);
+        cardsSum += additionalCard;
+        gameProcess();
+    }
 }
