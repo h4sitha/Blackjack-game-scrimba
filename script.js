@@ -52,4 +52,6 @@ function randomCard() {
 function getNewCard() {
     let additionalCard = randomCard();
     console.log(additionalCard);
+    cards.push(additionalCard);
+    cardsSum += additionalCard;
 }
