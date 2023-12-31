@@ -22,10 +22,6 @@ function startGame() {
 
     cards = [firstCard, secondCard];
 
-    function randomCard() {
-        return (Math.floor(Math.random() * 13) + 1);
-    }
-
     cardsSum = firstCard + secondCard;
     
     if (cardsSum === 21){
@@ -49,6 +45,11 @@ function startGame() {
 
 }
 
+function randomCard() {
+    return (Math.floor(Math.random() * 13) + 1);
+}
+
 function getNewCard() {
-    console.log("New Card Button");
+    let additionalCard = randomCard();
+    console.log(additionalCard);
 }
