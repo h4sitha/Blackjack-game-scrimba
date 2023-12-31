@@ -34,10 +34,13 @@ function startGame() {
     
     if (cardsSum === 21){
         statusPara.textContent = "You've got blackjack!";
+        sumPara.textContent = "Sum: " + cardsSum;
     } else if (cardsSum < 21) {
         statusPara.textContent = "Do you want a new card?";
+        sumPara.textContent = "Sum: " + cardsSum;
     } else {
         statusPara.textContent = "You're out of the game!";
+        sumPara.textContent = "Sum: " + cardsSum;
     }
 
     console.log(firstCard, secondCard);
