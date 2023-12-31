@@ -7,6 +7,12 @@ let sumPara = document.getElementById("cards-sum");
 let startButton = document.getElementById("start-btn");
 let newCardButton = document.getElementById("newcard-btn");
 
+startButton.addEventListener("click", startGame);
+
+function startGame() {
+    console.log("Start Game Button Clicked!");
+}
+
 // If the sum of those 2 cards are less than 21, then the player will be able to request another card.
 
 // If the sum of those 2 cards is equal to 21, he wins.
