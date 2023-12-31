@@ -5,7 +5,7 @@ let secondCard;
 
 let cards;
 
-let cardsSum = firstCard + secondCard;
+let cardsSum;
 
 
 let statusPara = document.getElementById("game-status");
@@ -31,6 +31,8 @@ function startGame() {
 
     cards.push(firstCard);
     cards.push(secondCard);
+
+    cardsSum = firstCard + secondCard;
     
     if (cardsSum === 21){
         statusPara.textContent = "You've got blackjack!";
