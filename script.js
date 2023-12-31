@@ -17,6 +17,7 @@ let startButton = document.getElementById("start-btn");
 let newCardButton = document.getElementById("newcard-btn");
 
 startButton.addEventListener("click", startGame);
+newCardButton.addEventListener("click", getNewCard);
 
 function startGame() {
 
@@ -48,11 +49,15 @@ function startGame() {
     console.log(firstCard, secondCard);
 
     cardsPara.textContent = "Card: "
-    
+
     for (let i=0; i < cards.length; i++) {
         cardsPara.textContent += cards[i] + " ";
     }
 
+}
+
+function getNewCard() {
+    console.log("New Card Button");
 }
 
 // If the sum of those 2 cards are less than 21, then the player will be able to request another card.
