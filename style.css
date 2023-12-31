@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: rgb(14, 107, 14);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
 }
 
 h1 {
