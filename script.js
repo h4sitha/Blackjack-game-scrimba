@@ -4,6 +4,9 @@ let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
 let sumPara = document.getElementById("cards-sum");
 
+let startButton = document.getElementById("start-btn");
+let newCardButton = document.getElementById("newcard-btn");
+
 // If the sum of those 2 cards are less than 21, then the player will be able to request another card.
 
 // If the sum of those 2 cards is equal to 21, he wins.
