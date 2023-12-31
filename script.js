@@ -1,13 +1,18 @@
 // When the start game button pressed 2 random cards will be generated.
 
-let firstCard = 10;
-let secondCard = 10;
+let firstCard = randomCard();
+let secondCard = randomCard();
 
 let cardsSum = firstCard + secondCard;
 
 let statusPara = document.getElementById("game-status");
 let cardsPara = document.getElementById("cards-recieved");
 let sumPara = document.getElementById("cards-sum");
+
+function randomCard() {
+    return (Math.floor(Math.random() * 13) + 1);
+}
+
 
 let startButton = document.getElementById("start-btn");
 let newCardButton = document.getElementById("newcard-btn");
@@ -23,6 +28,8 @@ function startGame() {
     } else {
         statusPara.textContent = "You're out of the game!";
     }
+
+    console.log(firstCard, secondCard);
 
 }
 
